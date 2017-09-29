@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">OA 系统</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="password">密码</string>
+    <string name="user">用户名/邮箱/手机号</string>
+    <string name="login">登录</string>
+    <string name="Other_login">其他登录方式</string>
+    <string name="Reg_Now">立即注册</string>
+    <string name="No_user">没有帐号？</string>
+    <string name="Register">注册帐号</string>
+    <string name="Confirm">提交注册</string>
+    <string name="exit">取消</string>
+    <string name="name">个人呢称：</string>
+    <string name="reg_password">密码：</string>
+    <string name="Confirm_Pass">确认密码：</string>
+    <string name="e_mall">E-mall：</string>
+    <string name="Phone_number">手机号：</string>
+    <string name="sex">性别：</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="Main">主页</string>
+</resources>

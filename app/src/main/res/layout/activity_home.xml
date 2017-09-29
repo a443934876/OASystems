@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/customerInfo_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="1dp">
+
+            <ImageView
+                android:id="@+id/customerInfo_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/customer_info" />
+
+            <TextView
+                android:id="@+id/customerInfo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="客户信息"
+                android:textColor="#82858b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/workReport_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/workReport_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/work_report" />
+
+            <TextView
+                android:id="@+id/workReport_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="工作报告"
+                android:textColor="#82858b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/powerNotes_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/powerNotes_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:src="@drawable/power_notes" />
+
+            <TextView
+                android:id="@+id/powerNotes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="日程管理"
+                android:textColor="#82858b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/official_Business_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/official_Business_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:src="@drawable/official_business" />
+
+            <TextView
+                android:id="@+id/official_Business_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="出差管理"
+                android:textColor="#82858b" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="4"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/clientVisit_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="1dp">
+
+            <ImageView
+                android:id="@+id/clientVisit_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/client_visit" />
+
+            <TextView
+                android:id="@+id/clientVisit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="客户拜访"
+                android:textColor="#82858b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leave_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/leave_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/leave" />
+
+            <TextView
+                android:id="@+id/leave_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="请假管理"
+                android:textColor="#82858b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/workAssigned_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/workAssigned_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/work_assigned" />
+
+            <TextView
+                android:id="@+id/workAssigned_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="工作交办"
+                android:textColor="#82858b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/more_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/more_image"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/more_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="更多"
+                android:textColor="#82858b" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:background="#EEEEEE"
+        android:id="@+id/tv_inform"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="通知       共0条" />
+
+    <ListView
+        android:fastScrollAlwaysVisible="true"
+        android:id="@+id/lv_inform"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+    </ListView>
+</LinearLayout>
