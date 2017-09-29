@@ -6,8 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.oasystems.R;
+import com.example.oasystems.utils.Inform;
+import com.example.oasystems.utils.InformAdapter;
+
+import org.litepal.crud.DataSupport;
+
+import java.util.List;
 
 /**
  * 项目名称：OASystems
@@ -21,5 +28,15 @@ public class NewsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View activity_news = inflater.inflate(R.layout.activity_news,container,false);
         return activity_news;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ListView listView = (ListView) getActivity().findViewById(R.id.listView_inform);
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        List<Inform> informList = DataSupport.findAll(Inform.class);
+        InformAdapter adapter = new InformAdapter(informList, inflater);
+        listView.setAdapter(adapter);
     }
 }

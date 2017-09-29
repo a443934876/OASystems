@@ -33,16 +33,14 @@ import java.util.List;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
     private TextView tv_inform;
-    private List<Inform> informList;
 
     @Override
     public void onResume() {
         super.onResume();
         ListView listView = (ListView) getActivity().findViewById(R.id.lv_inform);
-        LayoutInflater minflater = getActivity().getLayoutInflater();
-
-        informList = DataSupport.findAll(Inform.class);
-        InformAdapter adapter = new InformAdapter(informList, minflater);
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        List<Inform> informList = DataSupport.findAll(Inform.class);
+        InformAdapter adapter = new InformAdapter(informList, inflater);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -68,19 +66,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initViews();
-//        initData();
-
-    }
-
-    private void initData() {
-        for (int i = 0; i <= 5; i++) {
-            Inform inform = new Inform();
-            inform.setTitle(String.valueOf(i));
-            inform.setContent(String.valueOf(i));
-            inform.setDate(String.valueOf(i));
-            inform.setImageView(R.drawable.bg_button);
-            inform.save();
-        }
     }
 
     private void initViews() {

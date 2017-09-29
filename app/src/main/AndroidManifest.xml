@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Activity.MainActivity"
-            android:theme="@style/AppTheme.NoAcitionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleInstance"/>           <!-- singleInstance：如果启动的Activity不存在就创建一个Activity同时创建一个栈，如果存在就将指定的Activity存在的栈移动到栈顶
 　　注:表示这个Activity只能存在于一个独立的任务栈中,同应用的其它Activity与其无关. -->
         <activity

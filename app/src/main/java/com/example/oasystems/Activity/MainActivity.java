@@ -8,21 +8,16 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.oasystems.R;
 import com.example.oasystems.fragment.ContactsFragment;
 import com.example.oasystems.fragment.HomeFragment;
 import com.example.oasystems.fragment.NewsFragment;
 import com.example.oasystems.fragment.NomFragment;
-import com.example.oasystems.utils.CustomDialog;
 import com.example.oasystems.utils.LoginIdData;
 
-import org.litepal.LitePal;
-import org.litepal.crud.DataSupport;
 
 /**
  * 项目名称：OASystems
@@ -51,25 +46,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private NomFragment nomFragment;
 
-    /**
+    /*
      * 消息界面布局
      */
-    private View homeLayout;
+//    private View homeLayout;
 
-    /**
+    /*
      * 联系人界面布局
      */
-    private View contactsLayout;
+//    private View contactsLayout;
 
-    /**
+    /*
      * 动态界面布局
      */
-    private View newsLayout;
+//    private View newsLayout;
 
-    /**
+    /*
      * 设置界面布局
      */
-    private View nomLayout;
+//    private View nomLayout;
 
     /**
      * 在Tab布局上显示消息图标的控件
@@ -127,16 +122,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentManager = getSupportFragmentManager();
         // 第一次启动时选中第0个tab
         setTabSelection(0);
-
-
     }
 
 
     private void initViews() {
-        homeLayout = findViewById(R.id.home_layout);
-        contactsLayout = findViewById(R.id.contacts_layout);
-        newsLayout = findViewById(R.id.news_layout);
-        nomLayout = findViewById(R.id.nom_layout);
+        View  homeLayout = findViewById(R.id.home_layout);
+        View  contactsLayout = findViewById(R.id.contacts_layout);
+        View  newsLayout = findViewById(R.id.news_layout);
+        View  nomLayout = findViewById(R.id.nom_layout);
         homeImage = (ImageView) findViewById(R.id.home_image);
         contactsImage = (ImageView) findViewById(R.id.contacts_image);
         newsImage = (ImageView) findViewById(R.id.news_image);
