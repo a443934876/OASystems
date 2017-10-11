@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -34,7 +35,6 @@ public class NewsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View activity_news = inflater.inflate(R.layout.activity_news,container,false);
         Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_news);
-//        toolbar.setTitle("");
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         setHasOptionsMenu(true);
         return activity_news;
@@ -43,8 +43,8 @@ public class NewsFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.clear();
-        inflater.inflate(R.menu.toolbar,menu);
+       inflater.inflate(R.menu.toolbar,menu);
+        Log.i("TAG", "onCreateOptionsMenu: ");
     }
 
     @Override
