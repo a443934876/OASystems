@@ -8,4 +8,6 @@
     <color name="colorBlack">#000000</color>
     <color name="color_rb_inform">#6373A5</color>
     <color name="color_rb_notify">#F177A1</color>
+    <color name="color_gray">#EEEEEE</color>
+    <color name="color_white">#FFFFFF</color>
 </resources>

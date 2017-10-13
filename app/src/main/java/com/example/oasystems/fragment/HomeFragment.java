@@ -1,5 +1,6 @@
 package com.example.oasystems.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -61,6 +62,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.activity_home, null);
         return view;
     }
+
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -141,4 +144,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
         }
     }
+
+
+
 }

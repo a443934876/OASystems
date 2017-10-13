@@ -146,22 +146,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        TextView textView= (TextView) findViewById(R.id.tv_main);
+
         switch (v.getId()) {
             case R.id.home_layout:
-                // 当点击了消息tab时，选中第1个tab
+                // 当点击了主页tab时，选中第1个tab
                 setTabSelection(0);
+                textView.setText("主页");
                 break;
             case R.id.contacts_layout:
                 // 当点击了联系人tab时，选中第2个tab
                 setTabSelection(1);
+                textView.setText("联系人");
                 break;
             case R.id.news_layout:
-                // 当点击了动态tab时，选中第3个tab
+                // 当点击了通知tab时，选中第3个tab
                 setTabSelection(2);
+                textView.setText("通知");
                 break;
             case R.id.nom_layout:
-                // 当点击了设置tab时，选中第4个tab
+                // 当点击了我的tab时，选中第4个tab
                 setTabSelection(3);
+                textView.setText("我的");
                 break;
             default:
                 break;

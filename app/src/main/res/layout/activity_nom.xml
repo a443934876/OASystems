@@ -1,28 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@color/color_gray"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/nom_nom"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical" >
+        android:background="@color/color_white">
 
         <ImageView
+            android:id="@+id/iv_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/nom_unselected"/>
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="这是个人界面"
+            android:layout_toRightOf="@id/iv_logo"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="丸土土"
             android:textSize="20sp" />
-    </LinearLayout>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_corp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_toRightOf="@+id/iv_logo"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="公司："
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_corp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_toRightOf="@+id/tv_corp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="拉拉哈哈"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@id/tv_corp_name"
+            android:src="@drawable/arrows" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
