@@ -143,8 +143,6 @@ public class NomActivity extends AppCompatActivity {
     }
     /**
      * 将content类型的Uri转化为文件类型的Uri
-     * @param uri
-     * @return
      */
     private Uri convertUri(Uri uri){
         InputStream is;
@@ -166,9 +164,6 @@ public class NomActivity extends AppCompatActivity {
     }
     /**
      * 将Bitmap写入SD卡中的一个文件中,并返回写入文件的Uri
-     * @param bm
-     * @param dirPath
-     * @return
      */
     private Uri saveBitmap(Bitmap bm, String dirPath) {
         //新建文件夹用于存放裁剪后的图片
@@ -202,7 +197,6 @@ public class NomActivity extends AppCompatActivity {
 
     /**
      * 通过Uri传递图像信息以供裁剪
-     * @param uri
      */
     private void startImageZoom(Uri uri){
         //构建隐式Intent来启动裁剪程序
