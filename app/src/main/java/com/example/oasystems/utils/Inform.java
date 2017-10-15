@@ -28,8 +28,6 @@ public class Inform extends DataSupport  {
         this.imageView = imageView;
     }
 
-
-
     public String getTitle() {
         return title;
     }

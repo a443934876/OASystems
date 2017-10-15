@@ -19,4 +19,5 @@
     <string name="man">男</string>
     <string name="woman">女</string>
     <string name="Main">主页</string>
+    <string name="id">帐号</string>
 </resources>

@@ -65,19 +65,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             LoginIdData loginIdData = new LoginIdData();
             loginIdData.addLoginId( et_user.getText().toString().trim());
             finish();
-
-
-
         }
-
-
     }
 
     public boolean login() {
         UserData mUserData = new UserData();
         String user = et_user.getText().toString().trim();
         String password = et_password.getText().toString().trim();
-        int count = mUserData.findUserByName(user);
+        int count = mUserData.findUserByID(user);
         boolean result = mUserData.findUserByPwd(user, password);
         if (!isEmpty(user, password)) {
             return false;

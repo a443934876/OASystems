@@ -1,7 +1,5 @@
 package com.example.oasystems.utils;
 
-import android.util.Log;
-
 import org.litepal.crud.DataSupport;
 
 /**
@@ -12,12 +10,11 @@ import org.litepal.crud.DataSupport;
 
 public class LoginIdData {
 
-    public boolean addLoginId(String name) {
+    public boolean addLoginId(String id) {
+        UserData userData = new UserData();
         LoginId loginId = new LoginId();
-        loginId.setName(name);
-        boolean result=loginId.save();
-        Log.i("TAG", "result: "+result);
-        return result;
+        loginId.setName(userData.findIDByName(id));
+        return loginId.save();
     }
 
     public void deleteLoginId() {

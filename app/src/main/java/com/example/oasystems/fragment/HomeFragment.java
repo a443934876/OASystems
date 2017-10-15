@@ -137,8 +137,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 getActivity().finish();
                 break;
             case R.id.more_layout:
-                Toast.makeText(getActivity(), "more_layout", Toast.LENGTH_SHORT).show();
-                Intent intent7 = new Intent(getActivity(), MoreActivity.class);
+//                Toast.makeText(getActivity(), "more_layout", Toast.LENGTH_SHORT).show();
+//                Intent intent7 = new Intent(getActivity(), MoreActivity.class);
+//                startActivity(intent7);
+                Intent intent7 = new Intent("com.example.oasystems.homeactivity.informinactivity.ACTION_START");
+
                 startActivity(intent7);
                 getActivity().finish();
                 break;

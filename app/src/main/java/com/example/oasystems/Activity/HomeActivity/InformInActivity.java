@@ -31,9 +31,8 @@ public class InformInActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.bt_save).setOnClickListener(this);
         Intent intent = getIntent();
         long id = intent.getLongExtra("id", 0);
-        List<Inform> informList = DataSupport.findAll(Inform.class, id+1043);
-        Log.i("TAG", "inform: "+id+"                "+informList);
-
+        List<Inform> informList = DataSupport.findAll(Inform.class, id);
+        Log.i("TAG", "informList:"+informList.toString());
         rg_inform.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {

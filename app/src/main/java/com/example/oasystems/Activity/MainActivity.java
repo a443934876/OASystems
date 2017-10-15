@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.example.oasystems.R;
 import com.example.oasystems.fragment.ContactsFragment;
 import com.example.oasystems.fragment.HomeFragment;
@@ -126,10 +127,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void initViews() {
-        View  homeLayout = findViewById(R.id.home_layout);
-        View  contactsLayout = findViewById(R.id.contacts_layout);
-        View  newsLayout = findViewById(R.id.news_layout);
-        View  nomLayout = findViewById(R.id.nom_layout);
+        View homeLayout = findViewById(R.id.home_layout);
+        View contactsLayout = findViewById(R.id.contacts_layout);
+        View newsLayout = findViewById(R.id.news_layout);
+        View nomLayout = findViewById(R.id.nom_layout);
         homeImage = (ImageView) findViewById(R.id.home_image);
         contactsImage = (ImageView) findViewById(R.id.contacts_image);
         newsImage = (ImageView) findViewById(R.id.news_image);
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        TextView textView= (TextView) findViewById(R.id.tv_main);
+        TextView textView = (TextView) findViewById(R.id.tv_main);
 
         switch (v.getId()) {
             case R.id.home_layout:

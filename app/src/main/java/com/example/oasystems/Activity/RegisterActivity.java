@@ -12,16 +12,12 @@ import android.widget.Toast;
 import com.example.oasystems.R;
 import com.example.oasystems.utils.UserData;
 
-
-import org.litepal.LitePal;
-import org.litepal.crud.DataSupport;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
-    private LitePal Users;
     private EditText et_name;
+    private EditText et_user_id;
     private EditText et_reg_password;
     private EditText et_Confirm_Pass;
     private EditText et_e_mail;
@@ -35,6 +31,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         et_name = (EditText) findViewById(R.id.et_name);
+        et_user_id = (EditText) findViewById(R.id.et_id);
         et_reg_password = (EditText) findViewById(R.id.et_reg_password);
         et_Confirm_Pass = (EditText) findViewById(R.id.et_Confirm_Pass);
         et_e_mail = (EditText) findViewById(R.id.et_e_mail);
@@ -70,6 +67,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void register_check() {
         UserData mUserData = new UserData();
         String name = et_name.getText().toString().trim();
+        String user_id = et_user_id.getText().toString().trim();
         String password = et_reg_password.getText().toString().trim();
         String Confirm_Pass = et_Confirm_Pass.getText().toString().trim();
         String e_mail = et_e_mail.getText().toString().trim();
@@ -78,15 +76,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (woman.getId() == rg_sex.getCheckedRadioButtonId()) {
             sex = getString(R.string.woman);
         }
-        if (isUserNameAndPwdValid()&& isEmail(e_mail)
+        if (isUserNameAndPwdValid() && isEmail(e_mail)
                 && isMobileNO(String.valueOf(Phone_number))
                 && isDiffer(password, Confirm_Pass)
-                && isRepeat(mUserData, name, e_mail, Phone_number)
-                  ) {
-            boolean result = mUserData.saveUserData(name, password, Confirm_Pass, e_mail, Phone_number, sex);
+                && isRepeat(mUserData, name, user_id, e_mail, Phone_number)
+                ) {
+            boolean result = mUserData.saveUserData(name, user_id, password, Confirm_Pass, e_mail, Phone_number, sex);
             if (result) {
                 Toast.makeText(RegisterActivity.this, "恭喜，注册成功", Toast.LENGTH_SHORT).show();
                 et_name.setText("");
+                et_user_id.setText("");
                 et_reg_password.setText("");
                 et_Confirm_Pass.setText("");
                 et_e_mail.setText("");
@@ -101,6 +100,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public boolean isUserNameAndPwdValid() {
         if (et_name.getText().toString().trim().equals("")) {
             Toast.makeText(RegisterActivity.this, "对不起，昵称不能为空", Toast.LENGTH_SHORT).show();
+            return false;
+        } else if (et_user_id.getText().toString().trim().equals("")) {
+            Toast.makeText(RegisterActivity.this, "对不起，帐号不能为空", Toast.LENGTH_SHORT).show();
             return false;
         } else if (et_reg_password.getText().toString().trim().equals("")) {
             Toast.makeText(RegisterActivity.this, "对不起，密码不能为空", Toast.LENGTH_SHORT).show();
@@ -121,9 +123,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     /**
      * 判断手机是否合法
-     *
-     * @param mobiles
-     * @return
      */
     public boolean isMobileNO(String mobiles) {
         Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
@@ -136,9 +135,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     /**
      * 判断邮箱是否合法
-     *
-     * @param email
-     * @return
      */
     public boolean isEmail(String email) {
         if (null == email || "".equals(email)) return false;
@@ -151,11 +147,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         return m.matches();
     }
 
-    public boolean isRepeat(UserData mUserData, String name, String e_mail, String Phone_number) {
+    public boolean isRepeat(UserData mUserData, String name, String user_id, String e_mail, String Phone_number) {
         int nameCount = mUserData.findUserByName(name);
+        int idCount = mUserData.findUserByID(user_id);
         int e_MailCount = mUserData.findUserByE_Mail(e_mail);
         int phoneNumberCount = mUserData.findUserByPhone_Numbe(Phone_number);
         if (nameCount > 0) {
+            Toast.makeText(RegisterActivity.this, "对不起，昵称重复,请重新输入", Toast.LENGTH_SHORT).show();
+            return false;
+        } else if (idCount > 0) {
             Toast.makeText(RegisterActivity.this, "对不起，帐号重复,请重新输入", Toast.LENGTH_SHORT).show();
             return false;
         } else if (e_MailCount > 0) {
