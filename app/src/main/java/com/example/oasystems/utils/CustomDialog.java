@@ -3,7 +3,6 @@ package com.example.oasystems.utils;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 
 /**
  * 项目名称：OASystems

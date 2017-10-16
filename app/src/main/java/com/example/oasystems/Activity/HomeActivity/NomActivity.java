@@ -15,12 +15,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.oasystems.R;
 import com.example.oasystems.utils.LoginId;
 import com.example.oasystems.utils.UserData;
-
 import org.litepal.crud.DataSupport;
 import java.io.File;
 import java.io.FileNotFoundException;

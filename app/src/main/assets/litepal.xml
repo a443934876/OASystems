@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <litepal>
-    <dbname value="Users"></dbname>
-    <version value="3"></version>
+    <dbname value="Users"/>
+    <version value="3"/>
     <list>
-        <mapping class="com.example.oasystems.utils.Users"></mapping>
-        <mapping class="com.example.oasystems.utils.Inform"></mapping>
-        <mapping class="com.example.oasystems.utils.LoginId"></mapping>
+        <mapping class="com.example.oasystems.utils.Users"/>
+        <mapping class="com.example.oasystems.utils.Inform"/>
+        <mapping class="com.example.oasystems.utils.LoginId"/>
     </list>
 </litepal>
 
