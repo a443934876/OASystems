@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.oasystems.Activity.HomeActivity.PowerNotesActivity">
 
+   <CalendarView
+       android:id="@+id/cv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+   </CalendarView>
 </android.support.constraint.ConstraintLayout>

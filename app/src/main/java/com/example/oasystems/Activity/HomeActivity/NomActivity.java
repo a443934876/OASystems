@@ -4,17 +4,23 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.oasystems.R;
 import com.example.oasystems.utils.LoginId;
+import com.example.oasystems.utils.UserData;
+
 import org.litepal.crud.DataSupport;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -35,8 +41,21 @@ public class NomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nom2);
         iv_avatar = (ImageView) findViewById(R.id.iv_avatar);
+        save();
+        getBitMap();
         dialogView();
         nameView();
+    }
+
+    private void save() {
+        findViewById(R.id.save).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserData userData = new UserData();
+                Bitmap bitmap= ((BitmapDrawable)iv_avatar.getDrawable()).getBitmap();
+                 userData.saveBitmap(bitmap);
+            }
+        });
     }
 
     private void nameView() {
@@ -217,5 +236,13 @@ public class NomActivity extends AppCompatActivity {
     }
 
 
+    public void getBitMap() {
+        UserData userData = new UserData();
+        if (userData.getBitmap()==null){
+            Log.i("TAG", "getBitMap: "+userData.getBitmap());
+        }else {
+            iv_avatar.setImageBitmap(userData.getBitmap());
+        }
 
+    }
 }

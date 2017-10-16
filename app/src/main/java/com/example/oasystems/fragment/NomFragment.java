@@ -8,9 +8,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.oasystems.Activity.HomeActivity.NomActivity;
 import com.example.oasystems.R;
 import com.example.oasystems.utils.LoginId;
@@ -28,15 +27,12 @@ public class NomFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View activity_nom = inflater.inflate(R.layout.activity_nom, container, false);
-
-        return activity_nom;
+        return inflater.inflate(R.layout.activity_nom, container, false);
     }
 
     private void nameView() {
         LoginId loginIdList = DataSupport.findFirst(LoginId.class);
         TextView tv_name = (TextView) getActivity().findViewById(R.id.tv_name);
-        Log.i("TAG", "nameView: "+loginIdList.getName());
         tv_name.setText(loginIdList.getName());
     }
 
@@ -44,6 +40,7 @@ public class NomFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         nameView();
+        getBitMap();
         getActivity().findViewById(R.id.nom_nom).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,5 +49,15 @@ public class NomFragment extends Fragment {
 
             }
         });
+    }
+
+    public void getBitMap() {
+        ImageView tv_logo= (ImageView) getActivity().findViewById(R.id.iv_logo);
+        UserData userData = new UserData();
+        if (userData.getBitmap()==null){
+            Log.i("TAG", "getBitMap: "+userData.getBitmap());
+        }else {
+            tv_logo.setImageBitmap(userData.getBitmap());
+        }
     }
 }

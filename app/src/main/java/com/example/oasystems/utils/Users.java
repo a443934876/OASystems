@@ -19,7 +19,15 @@ public class Users extends DataSupport {
     private String confirm_Pass;
     private String phone_Number;
     private String sex;
-    private ImageView iv_avatar;
+    private byte[] head_shot;
+
+    public byte[] getHead_shot() {
+        return head_shot;
+    }
+
+    public void setHead_shot(byte[] head_shot) {
+        this.head_shot = head_shot;
+    }
 
     public String getUser_id() {
         return user_id;
@@ -29,13 +37,6 @@ public class Users extends DataSupport {
         this.user_id = user_id;
     }
 
-    public ImageView getIv_avatar() {
-        return iv_avatar;
-    }
-
-    public void setIv_avatar(ImageView iv_avatar) {
-        this.iv_avatar = iv_avatar;
-    }
 
     public String getName() {
         return name;
@@ -85,17 +86,4 @@ public class Users extends DataSupport {
         this.sex = sex;
     }
 
-    @Override
-    public String toString() {
-        return "Users{" +
-                "name='" + name + '\'' +
-                ", user_id='" + user_id + '\'' +
-                ", password='" + password + '\'' +
-                ", e_mall='" + e_mall + '\'' +
-                ", confirm_Pass='" + confirm_Pass + '\'' +
-                ", phone_Number='" + phone_Number + '\'' +
-                ", sex='" + sex + '\'' +
-                ", iv_avatar=" + iv_avatar +
-                '}';
-    }
 }
