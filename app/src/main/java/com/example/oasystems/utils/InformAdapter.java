@@ -46,7 +46,7 @@ public class InformAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View informView;
         if (convertView == null) {
-            informView = inflater.inflate(R.layout.inform_item,null);
+            informView = inflater.inflate(R.layout.inform_item, null);
         } else {
             informView = convertView;
         }

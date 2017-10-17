@@ -2,33 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/color_gray">
+    android:background="@color/color_gray"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/nom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3F51B5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="个人信息"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:id="@+id/avatar"
-        android:background="@color/color_white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
         <TextView
             android:id="@+id/tv_avatar_name"
-            android:paddingLeft="10dp"
-            android:textSize="20sp"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="头像"/>
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:text="头像"
+            android:textSize="20sp" />
+
         <ImageView
             android:id="@+id/iv_avatar"
-            android:layout_marginLeft="250dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
-            />
+            android:layout_marginLeft="250dp"
+            android:src="@mipmap/ic_launcher" />
     </LinearLayout>
+
     <Button
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="保存"/>
+        android:text="保存" />
 
 </LinearLayout>

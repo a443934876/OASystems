@@ -49,17 +49,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.HomeActivity.InformOutActivity"></activity>
-        <activity android:name=".Activity.HomeActivity.NomActivity">
+        <activity android:name=".Activity.HomeActivity.InformOutActivity">
 
-
+        </activity>
+        <activity
+            android:name=".Activity.HomeActivity.NomActivity"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
 
     </application>
-
-
-
 
 
 </manifest>
