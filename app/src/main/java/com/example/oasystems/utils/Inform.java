@@ -9,7 +9,7 @@ import org.litepal.crud.DataSupport;
  * 注释说明：
  */
 
-public class Inform extends DataSupport  {
+public class Inform extends DataSupport {
 
     private String title;
     private String content;
@@ -48,13 +48,4 @@ public class Inform extends DataSupport  {
         this.date = date;
     }
 
-    @Override
-    public String toString() {
-        return "Inform{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", date='" + date + '\'' +
-                ", imageView=" + imageView +
-                '}';
-    }
 }
