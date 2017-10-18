@@ -27,45 +27,14 @@ import com.example.oasystems.utils.LoginIdData;
  */
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    /**
-     * 用于展示消息的Fragment
-     */
+    //用于展示主页的Fragment
     private HomeFragment homeFragment;
-
-    /**
-     * 用于展示联系人的Fragment
-     */
+     //用于展示联系人的Fragment
     private ContactsFragment contactsFragment;
-
-    /**
-     * 用于展示动态的Fragment
-     */
+     //用于展示通知的Fragment
     private NewsFragment newsFragment;
-
-    /**
-     * 用于展示设置的Fragment
-     */
+     //用于展示个人的Fragment
     private NomFragment nomFragment;
-
-    /*
-     * 消息界面布局
-     */
-//    private View homeLayout;
-
-    /*
-     * 联系人界面布局
-     */
-//    private View contactsLayout;
-
-    /*
-     * 动态界面布局
-     */
-//    private View newsLayout;
-
-    /*
-     * 设置界面布局
-     */
-//    private View nomLayout;
 
     /**
      * 在Tab布局上显示消息图标的控件

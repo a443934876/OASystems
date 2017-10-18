@@ -1,11 +1,7 @@
 package com.example.oasystems.utils;
 
-import android.widget.ImageView;
-
 import org.litepal.crud.DataSupport;
 
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 项目名称：OASystems

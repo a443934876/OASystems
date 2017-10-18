@@ -34,7 +34,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 || DataSupport.findFirst(com.example.oasystems.utils.Inform.class) == null
                 || DataSupport.findFirst(com.example.oasystems.utils.LoginId.class) == null){
             LitePal.getDatabase();
-            Log.i("TAG", " LitePal.getDatabase()");
         }
     }
 

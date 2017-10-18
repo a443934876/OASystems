@@ -6,9 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.oasystems.R;
-
 import java.util.List;
 
 /**
@@ -46,7 +44,7 @@ public class InformAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View informView;
         if (convertView == null) {
-            informView = inflater.inflate(R.layout.inform_item, null);
+            informView = inflater.inflate(R.layout.inform_item, parent, false);
         } else {
             informView = convertView;
         }
