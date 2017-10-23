@@ -48,4 +48,13 @@ public class Inform extends DataSupport {
         this.date = date;
     }
 
+    @Override
+    public String toString() {
+        return "Inform{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", date='" + date + '\'' +
+                ", imageView=" + imageView +
+                '}';
+    }
 }

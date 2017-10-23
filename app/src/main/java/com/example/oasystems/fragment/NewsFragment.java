@@ -36,8 +36,8 @@ public class NewsFragment extends Fragment {
 //        listView.setAdapter(adapter);
         FragmentTabHost fragmentTabHost= (FragmentTabHost)getActivity().findViewById(R.id.tab_host);
         fragmentTabHost.setup(getActivity(),getFragmentManager(),R.id.fragment);
-        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("common").setIndicator("普通"),CommonFragment.class,null);
-
+        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("common").setIndicator("普通通知"),CommonFragment.class,null);
+        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("important").setIndicator("重要通知"),ImportantFragment.class,null);
 
     }
 
