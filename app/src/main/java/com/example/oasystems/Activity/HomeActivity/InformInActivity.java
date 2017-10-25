@@ -1,9 +1,14 @@
 package com.example.oasystems.Activity.HomeActivity;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -63,8 +68,26 @@ public class InformInActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.bt_save:
                 intData();
+                inform();
                 break;
         }
+    }
+
+    private void inform() {
+        Intent intent = new Intent(this,InformOutActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(this,0,intent,0);
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        Notification notification = new NotificationCompat.Builder(this)
+                .setContentTitle("OASystems")
+                .setContentText("一条新消息")
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.drawable.logo)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.logo))
+                .setContentIntent(pi)
+                .setDefaults(Notification.DEFAULT_VIBRATE)
+                .build();
+
+        manager.notify(1,notification);
     }
 
     private void intData() {

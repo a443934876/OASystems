@@ -12,14 +12,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="内容:"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/et_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入内容"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 
@@ -35,7 +35,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="类型："
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <RadioGroup
             android:id="@+id/rg_inform"
@@ -57,12 +57,12 @@
                 android:gravity="center_horizontal"
                 android:text="普通通知"
                 android:textColor="@color/rb_selector_color"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_weight="1"></View>
+                android:layout_weight="1"/>
 
             <RadioButton
                 android:id="@+id/rb_notify"
@@ -74,7 +74,7 @@
                 android:gravity="center_horizontal"
                 android:text="重要通知"
                 android:textColor="@color/rb_selector_color"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
         </RadioGroup>
 
     </LinearLayout>
