@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "26.0.1"
+
     defaultConfig {
         applicationId "com.example.oasystems"
         minSdkVersion 15
@@ -28,6 +29,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'org.litepal.android:core:1.6.0'
     testCompile 'junit:junit:4.12'
+
 }
 
 
