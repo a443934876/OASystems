@@ -40,7 +40,7 @@ public class NomFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         nameView();
-        getBitMap();
+
         getActivity().findViewById(R.id.nom_nom).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +49,12 @@ public class NomFragment extends Fragment {
 
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getBitMap();
     }
 
     public void getBitMap() {
