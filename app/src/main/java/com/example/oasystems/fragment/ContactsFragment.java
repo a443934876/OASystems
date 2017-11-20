@@ -5,15 +5,23 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.oasystems.R;
+import com.example.oasystems.utils.ContactInfo;
+import com.example.oasystems.utils.ContactInfoUtils;
+
+import java.util.List;
 
 /**
  * 项目名称：OASystems
@@ -22,6 +30,7 @@ import com.example.oasystems.R;
  */
 
 public class ContactsFragment extends Fragment {
+    private List<ContactInfo> infos;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,6 +44,47 @@ public class ContactsFragment extends Fragment {
         mToolbar.setTitle("");
         ((AppCompatActivity)getActivity()).setSupportActionBar(mToolbar);
         setHasOptionsMenu(true);
+
+        infos = ContactInfoUtils.getAllContactInfos(getActivity());
+
+        ListView contacts_list= (ListView) getActivity().findViewById(R.id.contacts_list);
+        contacts_list.setAdapter(new BaseAdapter() {
+            @Override
+            public int getCount() {
+                return infos.size();
+            }
+
+            @Override
+            public Object getItem(int position) {
+                return null;
+            }
+
+            @Override
+            public long getItemId(int position) {
+                return 0;
+            }
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view;
+                if (convertView == null) {
+                    view = View.inflate(getActivity(),R.layout.contact_item,null);
+
+                } else {
+                    view= convertView;
+                }
+                TextView contact_name = (TextView) view.findViewById(R.id.contact_name);
+                TextView contact_phone = (TextView) view.findViewById(R.id.contact_phone);
+                TextView contact_email = (TextView) view.findViewById(R.id.contact_email);
+                ContactInfo info = infos.get(position);
+                contact_name.setText(info.getName());
+                contact_phone.setText(info.getPhone());
+                contact_email.setText(info.getEmail());
+                return view;
+            }
+        });
+
+
     }
 
     @Override
@@ -48,7 +98,7 @@ public class ContactsFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.add:
-                Toast.makeText(getActivity(),"add",Toast.LENGTH_SHORT).show();
+
                 break;
         }
         return true;

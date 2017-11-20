@@ -19,7 +19,6 @@ import java.util.List;
 public class UserData {
     public boolean findUserByPwd(String user_id, String password) {
         List<Users> usersList = DataSupport.where("user_id=?", user_id).find(Users.class);
-        Log.i("TAG", "findUserByPwd: "+usersList);
         if (usersList.size() < 1 ) {
             return false;
         }

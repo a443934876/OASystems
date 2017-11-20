@@ -1,11 +1,10 @@
 package com.example.oasystems.fragment;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import android.widget.Toast;
 import com.example.oasystems.Activity.HomeActivity.ClientVisitActivity;
 import com.example.oasystems.Activity.HomeActivity.CustomerInfoActivity;
 import com.example.oasystems.Activity.HomeActivity.LeaveActivity;
-import com.example.oasystems.Activity.HomeActivity.MoreActivity;
 import com.example.oasystems.Activity.HomeActivity.Official_BusinessActivity;
 import com.example.oasystems.Activity.HomeActivity.PowerNotesActivity;
 import com.example.oasystems.Activity.HomeActivity.WorkReportActivity;
