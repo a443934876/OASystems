@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="20dp"
-            android:text="E_mall："
+            android:text="e_mail："
             android:textSize="15sp"
             />
         <TextView

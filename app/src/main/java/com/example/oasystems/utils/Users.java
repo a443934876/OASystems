@@ -12,7 +12,7 @@ public class Users extends DataSupport {
     private String name;
     private String user_id;
     private String password;
-    private String e_mall;
+    private String e_mail;
     private String confirm_Pass;
     private String phone_Number;
     private String sex;
@@ -51,12 +51,12 @@ public class Users extends DataSupport {
         this.password = password;
     }
 
-    public String getE_mall() {
-        return e_mall;
+    public String gete_mail() {
+        return e_mail;
     }
 
-    public void setE_mall(String e_mall) {
-        this.e_mall = e_mall;
+    public void sete_mail(String e_mail) {
+        this.e_mail = e_mail;
     }
 
     public String getConfirm_Pass() {
