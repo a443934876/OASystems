@@ -65,10 +65,10 @@ public class UserData {
         return result;
     }
 
-    public int updatePassword(String id, String password) {
+    public int updatePassword(String user_id, String password) {
         ContentValues values = new ContentValues();
         values.put("password", password);
-        int result = DataSupport.updateAll(Users.class, values, "id=?", id);
+        int result = DataSupport.updateAll(Users.class, values, "user_id=?", user_id);
         return result;
     }
 
