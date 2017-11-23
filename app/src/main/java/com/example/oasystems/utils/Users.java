@@ -1,7 +1,4 @@
 package com.example.oasystems.utils;
-
-import android.widget.ImageView;
-
 import org.litepal.crud.DataSupport;
 
 /**

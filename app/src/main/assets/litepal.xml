@@ -6,6 +6,7 @@
         <mapping class="com.example.oasystems.utils.Users"/>
         <mapping class="com.example.oasystems.utils.Inform"/>
         <mapping class="com.example.oasystems.utils.LoginId"/>
+
     </list>
 </litepal>
 

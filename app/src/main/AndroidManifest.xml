@@ -34,7 +34,8 @@
         <activity
             android:name=".Activity.RegisterActivity"
             android:label="@string/Register" />
-        <activity android:name=".Activity.ForgetPasswordActivity" />
+        <activity android:name=".Activity.ForgetPasswordActivity"
+            android:label="忘记密码"/>
         <activity android:name=".Activity.HomeActivity.CustomerInfoActivity" />
         <activity android:name=".Activity.HomeActivity.WorkReportActivity" />
         <activity android:name=".Activity.HomeActivity.PowerNotesActivity" />

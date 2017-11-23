@@ -3,18 +3,16 @@ package com.example.oasystems.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.oasystems.utils.CustomDialog;
 import com.example.oasystems.R;
 import com.example.oasystems.utils.LoginIdData;
 import com.example.oasystems.utils.UserData;
-
 import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;
+
 
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {

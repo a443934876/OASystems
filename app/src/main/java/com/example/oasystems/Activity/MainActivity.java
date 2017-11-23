@@ -35,20 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private NewsFragment newsFragment;
      //用于展示个人的Fragment
     private NomFragment nomFragment;
-
-    /**
-     * 在Tab布局上显示消息图标的控件
-     */
+    //在Tab布局上显示消息图标的控件
     private ImageView homeImage;
-
-    /**
-     * 在Tab布局上显示联系人图标的控件
-     */
+    // 在Tab布局上显示联系人图标的控件
     private ImageView contactsImage;
-
-    /**
-     * 在Tab布局上显示动态图标的控件
-     */
+    //在Tab布局上显示动态图标的控件
     private ImageView newsImage;
 
     /**
