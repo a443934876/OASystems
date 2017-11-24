@@ -57,8 +57,6 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     @Override

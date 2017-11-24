@@ -118,59 +118,59 @@
             android:textColor="@color/selector_text_press_color" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:gravity="center_horizontal">
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="80dp"-->
+    <!--android:gravity="center_horizontal">-->
 
-        <View
+    <!--<View-->
 
-            android:layout_width="80dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="20dp"
-            android:background="#e2d6d6d6" />
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:background="#e2d6d6d6" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/Other_login"
-            android:textColor="#e2d6d6d6" />
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="@string/Other_login"-->
+    <!--android:textColor="#e2d6d6d6" />-->
 
-        <View
-            android:layout_width="80dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="50dp"
-            android:background="#e2d6d6d6" />
-    </LinearLayout>
+    <!--<View-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="50dp"-->
+    <!--android:background="#e2d6d6d6" />-->
+    <!--</LinearLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingTop="20dp">
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:paddingTop="20dp">-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/qq" />
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/qq" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            android:src="@drawable/weixin" />
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="30dp"-->
+    <!--android:paddingRight="30dp"-->
+    <!--android:src="@drawable/weixin" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/weibo" />
-    </LinearLayout>
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/weibo" />-->
+    <!--</LinearLayout>-->
 
 </LinearLayout>

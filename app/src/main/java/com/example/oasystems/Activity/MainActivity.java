@@ -29,11 +29,11 @@ import com.example.oasystems.utils.LoginIdData;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //用于展示主页的Fragment
     private HomeFragment homeFragment;
-     //用于展示联系人的Fragment
+    //用于展示联系人的Fragment
     private ContactsFragment contactsFragment;
-     //用于展示通知的Fragment
+    //用于展示通知的Fragment
     private NewsFragment newsFragment;
-     //用于展示个人的Fragment
+    //用于展示个人的Fragment
     private NomFragment nomFragment;
     //在Tab布局上显示消息图标的控件
     private ImageView homeImage;
@@ -41,35 +41,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView contactsImage;
     //在Tab布局上显示动态图标的控件
     private ImageView newsImage;
-
-    /**
-     * 在Tab布局上显示设置图标的控件
-     */
+    // 在Tab布局上显示设置图标的控件
     private ImageView nomImage;
-
-    /**
-     * 在Tab布局上显示消息标题的控件
-     */
+    //在Tab布局上显示消息标题的控件
     private TextView homeText;
-
-    /**
-     * 在Tab布局上显示联系人标题的控件
-     */
+    //在Tab布局上显示联系人标题的控件
     private TextView contactsText;
-
-    /**
-     * 在Tab布局上显示动态标题的控件
-     */
+    // 在Tab布局上显示动态标题的控件
     private TextView newsText;
-
-    /**
-     * 在Tab布局上显示设置标题的控件
-     */
+    //在Tab布局上显示设置标题的控件
     private TextView nomText;
-
-    /**
-     * 用于对Fragment进行管理
-     */
+    //用于对Fragment进行管理
     private FragmentManager fragmentManager;
 
     @Override
