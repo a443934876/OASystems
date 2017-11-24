@@ -25,20 +25,18 @@ public class NewsFragment extends Fragment {
     }
 
 
-
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        FragmentTabHost fragmentTabHost = (FragmentTabHost) getActivity().findViewById(R.id.tab_host);
+        fragmentTabHost.setup(getActivity(), getFragmentManager(), R.id.fragment);
+        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("common").setIndicator("普通通知"), CommonFragment.class, null);
+        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("important").setIndicator("重要通知"), ImportantFragment.class, null);
 //        ListView listView = (ListView) getActivity().findViewById(R.id.listView_inform);
 //        LayoutInflater inflater = getActivity().getLayoutInflater();
 //        List<Inform> informList = DataSupport.findAll(Inform.class);
 //        InformAdapter adapter = new InformAdapter(informList, inflater);
 //        listView.setAdapter(adapter);
-        FragmentTabHost fragmentTabHost= (FragmentTabHost)getActivity().findViewById(R.id.tab_host);
-        fragmentTabHost.setup(getActivity(),getFragmentManager(),R.id.fragment);
-        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("common").setIndicator("普通通知"),CommonFragment.class,null);
-        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("important").setIndicator("重要通知"),ImportantFragment.class,null);
-
     }
 
 

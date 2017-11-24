@@ -46,7 +46,6 @@ public class NomFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), NomActivity.class);
                 startActivity(intent);
-
             }
         });
     }
@@ -61,7 +60,7 @@ public class NomFragment extends Fragment {
         ImageView tv_logo= (ImageView) getActivity().findViewById(R.id.iv_logo);
         UserData userData = new UserData();
         if (userData.getBitmap()==null){
-            Log.i("TAG", "getBitMap: "+userData.getBitmap());
+            Log.i("TAG", "userData.getBitmap()==" + userData.getBitmap());
         }else {
             tv_logo.setImageBitmap(userData.getBitmap());
         }

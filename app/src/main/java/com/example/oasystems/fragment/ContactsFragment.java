@@ -1,7 +1,6 @@
 package com.example.oasystems.fragment;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.example.oasystems.R;
 import com.example.oasystems.utils.ContactInfo;
 import com.example.oasystems.utils.ContactInfoUtils;
@@ -28,8 +26,7 @@ import java.util.List;
  */
 
 public class ContactsFragment extends Fragment {
-    private List<ContactInfo> infos=null;
-    private Handler handler;
+    private List<ContactInfo> infos;
 
     @Nullable
     @Override
@@ -44,22 +41,13 @@ public class ContactsFragment extends Fragment {
         mToolbar.setTitle("");
         ((AppCompatActivity)getActivity()).setSupportActionBar(mToolbar);
         setHasOptionsMenu(true);
-        new Thread() {
-            @Override
-            public void run() {
-
-
-            }
-        }.start();
         infos = ContactInfoUtils.getAllContactInfos(getActivity());
         ListView contacts_list= (ListView) getActivity().findViewById(R.id.contacts_list);
         ContactsAdapter Adapter = new ContactsAdapter();
         contacts_list.setAdapter(Adapter) ;
-
-
     }
 
-     public  class ContactsAdapter extends  BaseAdapter {
+    private class ContactsAdapter extends BaseAdapter {
          @Override
          public int getCount() {
              return infos.size();
