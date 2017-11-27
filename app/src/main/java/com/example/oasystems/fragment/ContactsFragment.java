@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -77,6 +78,7 @@ public class ContactsFragment extends Fragment {
              TextView contact_email = (TextView) view.findViewById(R.id.contact_email);
              ContactInfo info = infos.get(position);
              contact_name.setText(info.getName());
+             Log.i("TAG", "Name: " + info);
              contact_phone.setText(info.getPhone());
              contact_email.setText(info.getEmail());
              return view;
